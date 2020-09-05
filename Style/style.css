@@ -100,7 +100,7 @@ ul.topnav li a{
 }
 
 ul.topnav li.top-right a:hover{
-  color: #f16b3a;
+  color: #36526b;
  
 }
   /* The navbar 
@@ -230,7 +230,7 @@ ul.topnav li.top-right a:hover{
 .news-div a:hover{
   text-decoration: none;
   background-color: rgb(231, 223, 227);
-  color: #f16b3a;
+  color: #374c61;
   
 }
   
@@ -290,7 +290,7 @@ ul.topnav li.top-right a:hover{
     display: block;
     width: 0;
     height: 2px;
-    background: #e46436;
+    background: #32759b;
     transition: width .3s;
 }
 
@@ -633,17 +633,14 @@ color: #5a5351;
   width: 100%;
   /*background-color: #e9c46a;*/
   background: linear-gradient(to left top,#03071e,#fff) ;
-  
   box-shadow: 0 2px 2px #efefef;
   z-index: 9999;
-  transition:all 0.5s;
+  transition:all 0.9s;
 }
 
 
 .navAn ul li a{
-  color: #ebd8d0;
+  color: #bdcaca;
 }
 
-.navAn ul li a{
-  color: #ebd8d0;
-}
+
