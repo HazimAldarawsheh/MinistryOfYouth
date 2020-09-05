@@ -37,7 +37,6 @@ body{
     background-image: url("../images/background.jpg");
     width: 100%;
     min-height: 120vh;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     /* Needed to position the navbar */
