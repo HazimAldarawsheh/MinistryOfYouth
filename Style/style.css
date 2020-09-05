@@ -18,7 +18,8 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #fff9f9;
+   /* background-color: #fff9f9;*/
+   background: linear-gradient(to left,#F3DE8A,#fff) ;
     font-family: 'Cairo', sans-serif;
 }
 
@@ -165,7 +166,8 @@ ul.topnav li.top-right a:hover{
   #body  {
     
     flex-direction: row;
-    background-color: #fff9f9;
+   /* background-color: #fff9f9;*/
+   background: linear-gradient(to left,#F3DE8A,#fff) ;
     margin: auto;
     padding-top: 40px;
     margin:  0px ;
@@ -178,7 +180,7 @@ ul.topnav li.top-right a:hover{
     width: 50%;
     text-align: center;
     height: 60px;
-    border-bottom: 2px solid #ebd8d0;
+    border-bottom: 2px solid #636f97;
     margin-bottom: 40px;
     
     
@@ -229,7 +231,7 @@ ul.topnav li.top-right a:hover{
 .news-div a:hover{
   text-decoration: none;
   background-color: rgb(231, 223, 227);
-  color: #374c61;
+  color: #28354e  ;
   
 }
   
@@ -631,7 +633,7 @@ color: #5a5351;
   left: 0;
   width: 100%;
   /*background-color: #e9c46a;*/
-  background: linear-gradient(to left top,#03071e,#fff) ;
+  background: linear-gradient(to left,#F3DE8A,#fff) ;
   box-shadow: 0 2px 2px #efefef;
   z-index: 9999;
   transition:all 0.9s;
@@ -639,7 +641,7 @@ color: #5a5351;
 
 
 .navAn ul li a{
-  color: #bdcaca;
+  color: #3f4242;
 }
 
 

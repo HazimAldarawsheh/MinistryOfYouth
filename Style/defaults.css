@@ -30,7 +30,7 @@ body{
 
 .active{
   
-  border-bottom: 1px solid thistle ;
+  border-bottom: 1px solid #4383a1   ;
 }
 /*End of deafaults*/
 
@@ -42,12 +42,11 @@ body{
 
   
   header{
-    background-color:header;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1000;
-    background-color: #55abe0;
+    background-color: #F3DE8A;
   }
   
   .topnav {
@@ -123,12 +122,11 @@ body{
 
   .head-txt{
     margin: auto;
-    
     height: 500px;
     width: 50%;
     text-align: center;
     height: 60px;
-    border-bottom: 2px solid #615b58;
+    border-bottom: 2px solid #636f97;
     margin-bottom: 40px;
     
     
