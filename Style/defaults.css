@@ -47,7 +47,7 @@ body{
     position: fixed;
     top: 0;
     z-index: 1000;
-    background-color: rgb(90 156 187);
+    background-color: #457b9d;
   }
   
   .topnav {

@@ -1,17 +1,17 @@
 var $sameer =$('.js--body');
 
 var $test = $('.test');
+var $topright=$('.top-right')
 
 $sameer.waypoint(function(dir) {
     if (dir == 'down') {
         $test.addClass('sticky');
         $test.addClass('navAn');
-        $test.removeClass('cool-link');
-        console.log('down');
+        $topright.removeClass('cool-link');
     } else {
         $test.removeClass('sticky');
-        console.log('up');
-        $test.removeClass('navAn')
+        $test.removeClass('navAn');
+        $topright.addClass('cool-link');
     }
 
 }, { offset: '30px' });
