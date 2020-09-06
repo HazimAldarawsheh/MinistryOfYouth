@@ -100,68 +100,9 @@ ul.topnav li a{
 }
 
 ul.topnav li.top-right a:hover{
-  color: #36526b;
+  color: #131106;
+}
  
-}
-  /* The navbar 
-  .topnav {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    width: 105%;
-    margin-top: -20px;
-    transition: 0.6s;
-  }
-  
-  
-  
-  /* Navbar links 
-  .topnav a {
-    display: inline-block;
-    flex-direction: row;
-    color: #000000;
-    text-align: center;
-    padding: 14px 10px;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-    
-  }
-  
-  .topnav .tobnav-right a:hover {
-    
-    background-color: rgba(221, 221, 221, 0.6);
-    color: black;
-  }
-
-  .tobnav-right > a:focus, .tobnav-right > a {
-    color: #333;
-  }
-  .tobnav-right > a:focus, .tobnav-right > a:hover, .tobnav-right > a:focus {
-    
-    border-bottom: 2px solid #EB233C;
-    
-  }
-
-  .navbar-ann::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-}
-
-.navbar-ann:hover::after {
-    width: 105%;
-    background-color: rgba(80, 82, 79,0.5);
-    transition: width .8s;
-  
-}
-*/
-  
-  /*.nav > li.active > a*/
 
   #body  {
     
@@ -180,7 +121,7 @@ ul.topnav li.top-right a:hover{
     width: 50%;
     text-align: center;
     height: 60px;
-    border-bottom: 2px solid #636f97;
+    border-bottom: 2px solid #606C38;
     margin-bottom: 40px;
     
     
@@ -291,7 +232,7 @@ ul.topnav li.top-right a:hover{
     display: block;
     width: 0;
     height: 2px;
-    background: #32759b;
+    background: #606C38;
     transition: width .3s;
 }
 
@@ -299,6 +240,21 @@ ul.topnav li.top-right a:hover{
     width: 100%;
     transition: width .8s;
   
+}
+
+.cool-linkN::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #b98c32;
+  transition: width .3s;
+}
+
+.cool-linkN:hover::after {
+  width: 100%;
+  transition: width .8s;
+
 }
 
  /* Footer */
@@ -318,14 +274,12 @@ ul.topnav li.top-right a:hover{
 
 footer{
   background-image: url("../images/398.jpg");
- background-attachment:fixed ;
+  background-attachment:fixed ;
   min-height: 40vh;
-  z-index: -1a;
   background-color: #666;
   color: white;
   text-align: center;
   font-family: 'Slabo 27px', serif;
-  overflow: hidden;
 
 }
   
@@ -384,7 +338,7 @@ text-align: center;
 }
 
 .d-footer{
-  
+ 
 display: flex;
 text-align: center;
 justify-content: space-around;
@@ -578,6 +532,11 @@ color: #5a5351;
   .info .ci{
     margin-top: 20px;
   }
+  .cu span{
+  
+    margin-bottom: 40px;
+    height: 100px;
+  }
 
   .socials ul li a img {
     padding-top: 4px;
@@ -609,6 +568,8 @@ color: #5a5351;
   
   
 }
+
+
 
 @media only screen and (max-width: 384px) {
   body {
@@ -644,4 +605,17 @@ color: #5a5351;
   color: #3f4242;
 }
 
+.navAn ul.topnav li.top-right a:hover{
+ /* color: #4d0230;*/
+ color: #B68F40;
+}
 
+.btn{
+  background-color: #606c38;
+  /*background-color: #00672D;*/
+  border: none;
+}
+
+.btn:hover{
+  background-color: #B68F40;
+}
