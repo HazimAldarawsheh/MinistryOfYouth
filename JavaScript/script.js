@@ -14,6 +14,6 @@ $sameer.waypoint(function(dir) {
         $topright.addClass('cool-linkN');
     }
 
-}, { offset: '30px' });
+}, { offset: '100px' });
 
 

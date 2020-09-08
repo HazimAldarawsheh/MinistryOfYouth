@@ -135,7 +135,6 @@ ul.topnav li.top-right a:hover{
   }
 
   .news-div{
-    width: 15%;
     height: 400px;
     text-align: center;
     border: 1px solid rgb(211, 211, 211);
@@ -190,7 +189,6 @@ ul.topnav li.top-right a:hover{
   }
   .slider-content{
     width: 130px;
-    height: 130px;
     margin-bottom: 10px;
     margin: auto;
     
@@ -223,7 +221,7 @@ ul.topnav li.top-right a:hover{
   }
 
   .slider-content img{
-    width: 130px;
+    width: 100%;
     height: 130px;
   }
 
@@ -260,7 +258,6 @@ ul.topnav li.top-right a:hover{
  /* Footer */
 .socials ,.map ,.info{
   width: 30%;
-  height: 250px;
   text-align: center;
   margin: auto;
   align-items: center;
@@ -275,7 +272,6 @@ ul.topnav li.top-right a:hover{
 footer{
   background-image: url("../images/398.jpg");
   background-attachment:fixed ;
-  min-height: 40vh;
   background-color: #666;
   color: white;
   text-align: center;
@@ -296,17 +292,16 @@ footer{
   justify-content: space-around;
   list-style-type: none;
   text-align: left;
-  height: 260px;
-  margin-top: -35px;
+
 }
 .socials ul li a{
   text-decoration: none;
   color: white;
 }
 .socials ul li  {  
-  height: 50px;
   display: flex;
-  width: 60%;
+  width: 100%;
+  
   
 
 }
@@ -369,7 +364,9 @@ color: #5a5351;
 
 
 
-
+.mediashit{
+width: 50%;
+}
 
 
 
@@ -413,49 +410,50 @@ color: #5a5351;
 
   
 }
+
+
 @media only screen and (max-width: 1085px) {
   nav ul li a{
     font-size: 0.8em;
   }
   
 }
-@media only screen and (max-width: 850px) {
+
+
+@media only screen and (max-width: 1190px) {
   nav ul li a{
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
-
-  ul.topnav{
-    flex-direction: column!important;
-    align-items: flex-end;
-    
-    margin-top: 0;
-    
-  }
-  nav ul li a{
-    color: rgb(8, 99, 129) !important;
-   
-  }
-  .burger-menu{
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 665px) {
-  nav{
-    display: none;
-  }
-
   
 }
+
+
 @media only screen and (max-width: 948px) {
-  body {
-    background-color: rgb(107, 23, 65);
-    width: 100%;
+  
+  
+  .footer-boxes{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  .socials , .info, .map{
+    width: 100%!important;
+    
+  }
+  .map iframe{
+    width: 100%!important;
+  }
+  .socials ul {
+    flex-direction: row;
+    width: 100%!important;
+    align-items: center;
+
+  }
+  
    .head-txt{
      font-size: 0.8em;
    }
-
+   
    .news-sec .news-div{
      font-size: 0.9em;
      width: 75%;
@@ -464,38 +462,34 @@ color: #5a5351;
      margin-bottom: 40px;
      
    }
-   .news-sec{
-     flex-direction: column;
-     min-height: 500px;
-    
-   }
+  
 
   header{
     width: 100%;
   }
 
-  .slider{
-    
-    flex-direction: column;
-    min-height: 1300px;
-    margin-bottom:20px ;
-    
+ 
+  .slider-box span{
+   font-size:0.7em ;
   }
-  .slider-box{
-    margin: auto;
-    margin-bottom: 20px;
+  .slider-content img{
+    width: 100px;
+    height: 100px;
+  }
+  .slider-content{
+    width: 100px;
+    height: 100px;
+    font-size: 0.7em;
   }
 
   footer{
     font-size: 0.8em;
-    min-height: 600px;
   }
-  .map{
-    display: none;
+  
+  .info{
+    text-align: center;
   }
-  .socials, .info{
-    width: 25%;
-  }
+  
   nav ul li a{
     font-size: 0.7em !important;
 
@@ -504,9 +498,85 @@ color: #5a5351;
     width: 108px;
     height: 78px;
   }
+
+  .map{
+    margin-bottom: 20px;
+  }
+  .sp-1{
+    width: 100%;
+    font-size: 1.2em;
+  }
+  .cu span{
+    border-bottom: 2px solid white ;
+  }
 }
 
-@media only screen and (max-width: 480px) {
+
+@media only screen and (max-width: 882px) {
+  nav ul li a{
+    font-size: 0.6em;
+  }
+
+  ul.topnav{
+    
+    
+  }
+  nav ul li.top-right{
+    padding: 5px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+}
+
+
+@media only screen and (max-width: 710px) {
+  .slider{
+    flex-direction: column;
+    min-height: 1000px;
+    
+  }
+  .slider-box{
+    margin: auto;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .carousel-control-prev{
+    display: none;
+  }
+  .carousel-control-next{
+    display: none;
+  }
+  nav ul li.top-right{
+    font-size: 0.9em;
+  }
+  
+}
+
+@media only screen and (max-width: 384px) { /*HAZIM*/
+  body {
+    background-color: rgb(40, 128, 158);
+    width: 100%;
+  }
+  
+  header{
+    width: 100%;
+  }
+  .head-txt {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 758px) {
+  
+
+}
+
+
+
+@media only screen and (max-width: 480px) { /*HAZIM*/
   body {
     background-color: rgb(40, 128, 158);
     width: 100%;
@@ -518,24 +588,29 @@ color: #5a5351;
 
   footer{
     font-size: 0.7em;
-    min-height: 600px;
+  }
+  
+  .socials ul li{
+    display: inline-block;
+  }
+  .socials ul{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
   }
   .map{
-    display: none;
+    width: 100%;
+    margin-bottom:20px ;
+    
   }
   .socials, .info{
-    width: 15%;
+    width: 100%;
   }
   .info span{
-    display: none;
+    margin-top: 10px;
   }
-  .info .ci{
-    margin-top: 20px;
-  }
-  .cu span{
   
-    margin-bottom: 40px;
-    height: 100px;
+  .cu span{
   }
 
   .socials ul li a img {
@@ -553,25 +628,23 @@ color: #5a5351;
     
   }
   .socials{
-    width: 50% !important;
+    width: 100% !important;
     
     
   }
   .info{
     
-    width: 40% !important;
-    margin-right: 10x;
+    width: 100% !important;
+    margin-top: 10x;
   }
-  .footer-boxes{
-    justify-content: space-between;
-  }
+  
   
   
 }
 
 
 
-@media only screen and (max-width: 384px) {
+@media only screen and (max-width: 384px) { /*HAZIM*/
   body {
     background-color: rgb(40, 128, 158);
     width: 100%;
@@ -585,7 +658,7 @@ color: #5a5351;
   }
 }
 
-/*########END OF MEDIA QUERIES ########*/
+/*######## END OF MEDIA QUERIES ########*/
 
 
 .sticky{
