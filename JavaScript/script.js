@@ -9,14 +9,15 @@ $sameer.waypoint(function(dir) {
         $navjq.addClass('navAn');
         $topright.removeClass('cool-linkN');
         $burger.removeClass('burger');
-        $burger.removeClass('shadow-5');
+        
 
     } else {
         $navjq.removeClass('sticky');
         $navjq.removeClass('navAn');
         $topright.addClass('cool-linkN');
         $burger.addClass('burger');
-        $burger.addClass('shadow-5');
+        document.querySelector('.burger-nav').style.display='none';
+        
 
 
     }
@@ -28,11 +29,15 @@ $sameer.waypoint(function(dir) {
 
 
 function burgerMenu() {
-    var menu = document.getElementById('burgerDis');
+    var menu = document.querySelector('.burger-nav');
     if (menu.style.display === "block") {
      menu.style.display = "none";
+     $navjq.removeClass('sticky');
+
     } else {
      menu.style.display = "block";
      menu.classList.add('topnav');
+     $navjq.addClass('sticky');
+
     }
   }
