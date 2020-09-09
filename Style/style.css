@@ -352,28 +352,33 @@ color: #5a5351;
 
 
 
+.ci{
+  height: 215px;
+  margin-right: px;
+}
+.ci span.sp-1{
+  display: inline-block;
+  margin-bottom: 20px;
 
-
-
-
-
-
-
-
-
-
-
-
-.mediashit{
-width: 50%;
+}
+.socials{
+  margin-top: 30px;
 }
 
+.burger{
+  background-color: #F3DE8A;
+  border-radius: 5px;
+}
 
+.map{
+  height: 100%;
+  height: 280px;
+}
 
-
-
-
-
+ul.topnav{
+  margin-top: 20px;
+ 
+}
 
 /******* MEDIA QUERIES********/
 
@@ -539,6 +544,9 @@ width: 50%;
   .slider-box{
     margin: auto;
   }
+  .spanVis{
+    display: none;
+  }
 }
 
 
@@ -552,7 +560,61 @@ width: 50%;
   nav ul li.top-right{
     font-size: 0.9em;
   }
+
+}
+@media only screen and (max-width: 744px) {
+
+  .cool-linkN{
+    
+  }
+  ul.topnav{
+    display: none;
+} 
+ ul.topnav{
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
+  justify-content: center; 
+  margin-top: 65px!important;
+  width: 100%!important;
   
+
+}
+ .topnav{
+  border-radius: 15px;
+  width: 100%;
+ }
+ .topnav li{
+ text-align: center;
+  font-size: 1.2em;
+  background: linear-gradient(to right,#F3DE8A,#fff) ;
+  width: 100%;
+}
+
+nav{
+  height: 63px;
+}
+
+ .top-left a img{
+   width: 98px;
+   height: 68px;
+ }
+ .burger-menu{
+   margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+ }
+ .burger-menu a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ }
 }
 
 @media only screen and (max-width: 384px) { /*HAZIM*/
@@ -577,6 +639,7 @@ width: 50%;
 
 
 @media only screen and (max-width: 480px) { /*HAZIM*/
+  
   body {
     background-color: rgb(40, 128, 158);
     width: 100%;
@@ -610,8 +673,7 @@ width: 50%;
     margin-top: 10px;
   }
   
-  .cu span{
-  }
+ 
 
   .socials ul li a img {
     padding-top: 4px;
