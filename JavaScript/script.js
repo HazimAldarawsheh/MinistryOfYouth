@@ -16,10 +16,8 @@ $sameer.waypoint(function(dir) {
         $navjq.removeClass('navAn');
         $topright.addClass('cool-linkN');
         $burger.addClass('burger');
-        document.querySelector('.burger-nav').style.display='none';
+       
         
-
-
     }
 
 }, { offset: '100px' });
