@@ -361,6 +361,9 @@ ul.topnav {
     margin-top: 20px;
 }
 
+.demo{
+    height: auto;
+}
 
 /******* MEDIA QUERIES********/
 
@@ -628,6 +631,16 @@ ul.topnav {
         width: 100% !important;
         margin-top: 10x;
     }
+    #demo{
+        height: 1000px;
+        overflow: hidden;
+    }
+    .news-div-dispaly{
+        display: none;
+    }
+    .news-div a{
+        font-size: 0.8em;
+    }
 }
 
 @media only screen and (max-width: 384px) {
@@ -641,6 +654,9 @@ ul.topnav {
     }
     .head-txt {
         width: 100% !important;
+    }
+    .btn{
+        margin-top: 40px;
     }
 }
 
