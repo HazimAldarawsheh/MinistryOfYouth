@@ -233,6 +233,23 @@ p {
     margin: auto;
     font-family: 'Cairo', sans-serif;
   }
+
+  .socials li:hover{
+    -moz-transform: translate(11px, 0px);
+-webkit-transform: translate(11px, 0px);
+-o-transform: translate(11px, 0px);
+-ms-transform: translate(11px, 0px);
+transform: translate(11px, 0px);
+    transition: 1s;
+}
+.ci .sp-1:hover{
+font-size: 1.2em;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+transition: 1s;
+}
 /*End of Footer*/
 
 
@@ -949,4 +966,20 @@ ul.cu-so li a img{
     width: 108px;
     height: 78px;
   }
+}
+
+.folded-corner:hover{
+  -moz-transform: translate(0px, -15px);
+ -webkit-transform: translate(0px, -15px);
+ -o-transform: translate(0px, -15px);
+ -ms-transform: translate(0px, -15px);
+ transform: translate(0px, -15px);
+
+ -webkit-border-radius: 0px 40px 0px 40px;
+-moz-border-radius: 0px 40px 0px 40px;
+border-radius: 0px 40px 0px 40px;
+ transition: all 1.5s;
+}
+.folded-corner{
+  box-shadow: 0 8px 6px -6px black;
 }

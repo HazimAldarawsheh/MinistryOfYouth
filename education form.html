@@ -68,13 +68,12 @@
     <div id="container">
 
         <div class="head-txt">
-            <h2>ورجينا موهبتك</h2>
+            <h2>تعليم</h2>
         </div>
 
         <div class="ab-container">
             
                 <div class="cs-form shadow-5 borRad15">
-
 
                     <form>
                         <div class="form-row">
@@ -113,27 +112,69 @@
                             </div>
                         </div>
 
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputState">التخصص الجامعي</label>
+                                <select id="gender" class="form-control col-md-12">
+                                    <option selected>Choose...</option>
+                                    <option>الطب</option>
+                                    <option>الهندسة</option>
+                                    <option>لغات</option>
+                                    <option>كلية الاعمال</option>
+                                    <option>تكنولوجيا المعلومات</option>
+                                    <option>تربية خاصة</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="inputState">المحافظة</label>
+                                <select id="talent" class="form-control col-md-12">
+                                    <option selected>Choose...</option>
+                                    <option>اربد</option>
+                                    <option>البلقاء</option>
+                                    <option>جرش</option>
+                                    <option>الزرقاء</option>
+                                    <option>الطفيلة</option>
+                                    <option>عجلون</option>
+                                    <option>العقبة</option>
+                                    <option>عمان</option>
+                                    <option>الكرك</option>
+                                    <option>مادبا</option>
+                                    <option>معان</option>
+                                    <option>المفرق</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlTextarea1">العنوان بالتفصيل</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+
+                        </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputState">التعليم</label>
+                                <label for="inputState">الفئة المستهدفة</label>
                                 <select id="education" class="form-control col-md-12">
                                     <option selected>Choose...</option>
                                     <option>اساسي</option>
                                     <option>ثانوي</option>
-                                    <option>جامعي</option>
+                                    <option></option>
 
                                 </select>
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="inputState">نوع الموهبة</label>
+                                <label for="inputState">القدرة على تعليم</label>
                                 <select id="talent" class="form-control col-md-12">
                                     <option selected>Choose...</option>
-                                    <option>ثقافي</option>
-                                    <option>ابداع</option>
-                                    <option>رياضة</option>
-                                    <option>ريادي</option>
+                                    <option>المواد الاساسية</option>
+                                    <option>اللغة الانجليزية</option>
+                                    <option>نشاطات رياضية</option>
+                                    <option>مواد تخصص الفرع العلمي</option>
+                                    <option>مواد تخصص الفرع الادبي</option>
 
                                 </select>
                             </div>
@@ -153,21 +194,6 @@
 
                         </div>
 
-                        <label for="inputMname col-md-3">اختر فيديو</label>
-                        <div class="col-md-3"></div>
-                        <div class="form-row">
-
-                            <div class="input-group mb-3 col-md-12 uploader">
-
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-                                </div>
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="">Upload</span>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-4"></div>
@@ -184,7 +210,7 @@
             <div class="side-nav shadow-5 borRad15" id="sticky">
                 <div class="nb-items">
     
-                    <li>
+                    <li class="active">
                         <a href="Services and initiatives.html">مبادرات</a>
                     </li>
     
@@ -192,7 +218,7 @@
                         <a href="services - parlimentary .html">الانتخابات النيابية</a>
                     </li>
     
-                    <li class="active">
+                    <li>
                         <a href="services - talents.html">المواهب</a>
                     </li>
     
