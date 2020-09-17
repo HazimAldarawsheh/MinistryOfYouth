@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ministry of Youth</title>
+    <title>مواهب</title>
+    <link rel="icon" href="social media logos/star.png" type='image/x-icon' />
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -76,23 +78,23 @@
                 <div class="cs-form shadow-5 borRad15">
 
 
-                    <form>
+                    <form id="talForm" action="talent.php" method="POST">
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                 <label for="inputFname">الاسم الاول</label>
-                                <input type="text" class="form-control" id="inputFname">
+                                <input type="text" class="form-control" id="inputFname" name="fname">
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="inputMname">اسم الاب</label>
-                                <input type="text" class="form-control" id="inputMname">
+                                <input type="text" class="form-control" id="inputMname" name="sname">
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="inputLname">اسم الجد</label>
-                                <input type="text" class="form-control" id="inputGname">
+                                <input type="text" class="form-control" id="inputGname" name="tname">
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="inputLname">اسم العائلة</label>
-                                <input type="text" class="form-control" id="inputLname">
+                                <input type="text" class="form-control" id="inputLname" name="lname">
                             </div>
                         </div>
 
@@ -100,15 +102,15 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="age">العمر</label>
-                                <input type="text" class="form-control" id="Age">
+                                <input type="text" class="form-control" id="Age" name="age">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="inputState">الجنس</label>
-                                <select id="gender" class="form-control col-md-12">
+                                <select id="gender" class="form-control col-md-12" name="gender">
                                     <option selected>Choose...</option>
-                                    <option>ذكر</option>
-                                    <option>انثى</option>
+                                    <option value="male">ذكر</option>
+                                    <option value="female">انثى</option>
                                 </select>
                             </div>
                         </div>
@@ -117,23 +119,23 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputState">التعليم</label>
-                                <select id="education" class="form-control col-md-12">
+                                <select id="education" class="form-control col-md-12" name="education">
                                     <option selected>Choose...</option>
-                                    <option>اساسي</option>
-                                    <option>ثانوي</option>
-                                    <option>جامعي</option>
+                                    <option value="basic">اساسي</option>
+                                    <option value="secondry">ثانوي</option>
+                                    <option value="university">جامعي</option>
 
                                 </select>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="inputState">نوع الموهبة</label>
-                                <select id="talent" class="form-control col-md-12">
+                                <select id="talent" class="form-control col-md-12" name="talent">
                                     <option selected>Choose...</option>
-                                    <option>ثقافي</option>
-                                    <option>ابداع</option>
-                                    <option>رياضة</option>
-                                    <option>ريادي</option>
+                                    <option value="letrature">ثقافي</option>
+                                    <option value="vreativity">ابداع</option>
+                                    <option value="sport">رياضة</option>
+                                    <option value="enterpreneure">ريادي</option>
 
                                 </select>
                             </div>
@@ -144,11 +146,11 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputFname">رقم الهاتف</label>
-                                <input type="tel" class="form-control" id="phoneNumber">
+                                <input type="tel" class="form-control" id="phoneNumber" name="phoneN">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputMname">البريد الالكتروني</label>
-                                <input type="email" class="form-control" id="email">
+                                <input type="email" class="form-control" id="email" name="email">
                             </div>
 
                         </div>
@@ -160,7 +162,7 @@
                             <div class="input-group mb-3 col-md-12 uploader">
 
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile02" name="videoLink">
                                     <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
                                 </div>
                                 <div class="input-group-append">
@@ -271,9 +273,12 @@
         <div class="d-footer"><span>All Rights Reserved</span></div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+     
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
@@ -282,19 +287,30 @@
         crossorigin="anonymous"></script>
 
 
-
+        <script>
+            $(document).ready(function () {
+                $("#talForm").submit(function (e) {
+                    e.preventDefault(); // avoid to execute the actual submit of the form.
+                    var form = $(this);
+                    var url = form.attr('action');
+        
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: form.serialize(), // serializes the form's elements.
+                        success: function (data) {
+                            alert("تم ارسال الطلب بنجاح"); // show response from the php script.
+                            window.location.href = "Services and initiatives.html";
+                        }
+                    });
+        
+                });
+            });
+        </script>
 
 
 
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
+
 
 </html>

@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ministry of Youth</title>
+    <title>اصدارات الوزارة</title>
+    <link rel="icon" href="social media logos/star.png" type='image/x-icon' />
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -74,35 +76,42 @@
 
         <ul class="responsive-table">
             <li class="table-header">
-                <div class="col col-1">مرجع الكتاب </div>
-                <div class="col col-2">اسم الكتاب</div>
+                <div class="col col-3">مرجع الكتاب </div>
+                <div class="col col-3">اسم الكتاب</div>
                 <div class="col col-3">اسم المؤلف</div>
+                <div class="col col-3">رقم الكتاب</div>
 
             </li>
-            <li class="table-row">
-                <div class="col col-1" data-label="book reference">1</div>
-                <div class="col col-2" data-label="book name">عبدالله بن الحسين مؤسس المملكة</div>
-                <div class="col col-3" data-label="author">محمد علي ذياب</div>
 
-            </li>
-            <li class="table-row">
-                <div class="col col-1" data-label="book reference">2</div>
-                <div class="col col-2" data-label="book name">الهاشميون و القضية الفلسطينية</div>
-                <div class="col col-3" data-label="author">د. غازي الربابعة</div>
+            <?php
+                  include 'includes/db.inc.php';
 
-            </li>
-            <li class="table-row">
-                <div class="col col-1" data-label="book reference">3</div>
-                <div class="col col-2" data-label="book name">عبدالله بن الحسين الملك المؤسس</div>
-                <div class="col col-3" data-label="author">أ.د يوسف غوانمة</div>
+                   $result=$mysqli->query('SELECT * FROM moyouth.publication ORDER BY book_ref;');    
 
-            </li>
-            <li class="table-row">
-                <div class="col col-1" data-label="book reference">4</div>
-                <div class="col col-2" data-label="book name">التطور الدستوري في الاردن</div>
-                <div class="col col-3" data-label="author">د. محمد الغزاوي</div>
+ 
 
-            </li>
+               if(!$result){
+                  echo "no data";
+                  }
+               else{
+       $counter=1;
+        while($row=$result->fetch_assoc()){
+             echo "<li class='table-row'>";
+             echo " <div class='col col-3' data-label='مرجع الكتاب'>$row[book_ref]</div>";
+             
+             echo "<div class='col col-3' data-label='اسم الكتاب'>$row[book_name]</div>";
+             echo " <div class='col col-3' data-label='المؤلف'>$row[author]</div>";
+             echo " <div class='col col-3' data-label='رقم الكتاب'>$counter</div> ";
+            $counter++;
+          echo "</li>";
+		  }
+       
+    }
+
+ 
+ 
+      
+    ?>
         </ul>
     </div>
     </div>

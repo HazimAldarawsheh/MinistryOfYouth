@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ministry of Youth</title>
+    <title>نموذج اقتراح</title>
+    <link rel="icon" href="social media logos/star.png" type='image/x-icon' />
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="Style/defaults.css">
     <link rel="stylesheet" href="Style/bootstrab fix.css">
@@ -70,21 +72,21 @@
 
 
                 <div class="cs-form shadow-5 borRad15">
-                    <form>
+                    <form id="suggForm" method="post" action="sugg.php">
 
 
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="inputFname">الاسم الاول</label>
-                                <input type="text" class="form-control" id="inputFname">
+                                <input type="text" class="form-control" id="inputFname" name="fname">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputMname">اسم الاب</label>
-                                <input type="text" class="form-control" id="inputMname">
+                                <input type="text" class="form-control" id="inputMname" name="sname">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputLname">اسم العائلة</label>
-                                <input type="text" class="form-control" id="inputLname">
+                                <input type="text" class="form-control" id="inputLname" name="lname">
                             </div>
                         </div>
 
@@ -92,15 +94,16 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="age">العمر</label>
-                                <input type="text" class="form-control" id="Age">
+                                <input type="text" class="form-control" id="Age" name="age">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="inputState">الجنس</label>
-                                <select id="gender" class="form-control col-md-12">
+                            
+                                <select id="gender" class="form-control col-md-12" name="gender">
                             <option selected>Choose...</option>
-                            <option>ذكر</option>
-                            <option>انثى</option>
+                            <option value="male">ذكر</option>
+                            <option value="female">انثى</option>
                         </select>
                             </div>
                         </div>
@@ -109,59 +112,50 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputState">المحافظة</label>
-                                <select id="gender" class="form-control col-md-12">
-                            <option selected>Choose...</option>
-                            <option>اربد</option>
-                            <option>البلقاء</option>
-                            <option>جرش</option>
-                            <option>الزرقاء</option>
-                            <option>الطفيلة</option>
-                            <option>عجلون</option>
-                            <option>العقبة</option>
-                            <option>المفرق</option>
-                            <option>عمان</option>
-                            <option>الكرك</option>
-                            <option>مادبا</option>
-                            <option>معان</option>
-                            
-
+                                <select id="gender" class="form-control col-md-12" name="city">
+                                    <option selected>Choose...</option>
+                                    <option value="irbid">اربد</option>
+                                    <option value="karak">البلقاء</option>
+                                    <option value="jarash">جرش</option>
+                                    <option value="zarqa">الزرقاء</option>
+                                    <option value="tafeleh">الطفيلة</option>
+                                    <option value="ajloon">عجلون</option>
+                                    <option value="aqaba">العقبة</option>
+                                    <option value="amman">عمان</option>
+                                    <option value="karak">الكرك</option>
+                                    <option value="madaba">مادبا</option>
+                                    <option value="ma'an">معان</option>
+                                    <option value="mafraq">المفرق</option>
                             
                         </select>
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="inputState">النادي المعني بالاقتراح</label>
-                                <select id="gender" class="form-control col-md-12">
-                            <option selected>Choose...</option>
-                            <option>option</option>
-                            
-                        </select>
+                                 <label for="inputFname">النادي المعني بالاقتراح</label>
+                                <input type="text" class="form-control" id="inputFname" name="club">
                             </div>
                         </div>
-
-
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputFname">رقم الهاتف</label>
-                                <input type="tel" class="form-control" id="phoneNumber">
+                                <input type="tel" class="form-control" id="phoneNumber" name="phoneN">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputMname">البريد الالكتروني</label>
-                                <input type="email" class="form-control" id="email">
+                                <input type="email" class="form-control" id="email" name="email">
                             </div>
 
                         </div>
                         <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputMname">موضوع الاقتراح</label>
-                            <input type="text" class="form-control" id="com-sub">
+                            <input type="text" class="form-control" id="com-sub" name="topic">
                         </div>
                     </div>
-
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">نص الاقتراح</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" name="mssg" rows="4"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary">تقديم</button>
@@ -258,14 +252,45 @@
         <div class="d-footer"><span>All Rights Reserved</span></div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 
 
-
-
-
+        <script>
+            $(document).ready(function () {
+                $("#suggForm").submit(function (e) {
+                    e.preventDefault(); // avoid to execute the actual submit of the form.
+                    var form = $(this);
+                    var url = form.attr('action');
+        
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: form.serialize(), // serializes the form's elements.
+                        success: function (data) {
+                            alert("تم ارسال الطلب بنجاح"); // show response from the php script.
+                            window.location.href = "Contact us.html";
+                        }
+                    });
+        
+                });
+            });
+        </script>
 </body>
+
+
+
 
 </html>

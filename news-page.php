@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ministry of Youth</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-<link rel="stylesheet" href="Style/defaults.css">
-<link rel="stylesheet" href="Style/bootstrab fix.css">
+    <link rel="stylesheet" href="Style/defaults.css">
+    <link rel="stylesheet" href="Style/bootstrab fix.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
 
@@ -19,11 +19,7 @@
 </head>
 
 <body>
-
-
-    <body>
-
-
+    
         <header>
 
             <nav>
@@ -47,7 +43,7 @@
                     </li>
     
                     <li class="top-right">
-                        <a href="Services and initiatives.html" class="active">خدمات و مبادرات</a>
+                        <a href="Services and initiatives.html">خدمات و مبادرات</a>
                     </li>
     
                     <li class="top-right">
@@ -66,62 +62,48 @@
     
             </nav>
 
-
         </header>
 
 
         <div id="container">
 
-            <div class="head-txt">
-                <h2>الخدمات و االمبادرات</h2>
-            </div>
-            <div class="ab-container">
-                <div class="ab-article">
+        <?php
+          include 'includes/db.inc.php';
+           
+           $result=$mysqli->query("SELECT * FROM moyouth.news where id ='$_GET[news_id]';");    
+
+ 
+
+    if(!$result){
+        echo "no data";
+    }
+    else{
+       
+        $row=$result->fetch_assoc();
+         
+            echo "<div class='head-txt news-txt'>";
+               echo "<h3>$row[title]</h3>";
+            echo "</div>";
+
+           echo "<div class='ab-container'>";
+                echo "<div class='ab-article shadow-5'>";
 
 
-                    <div class="article shadow-5 borRad15">
-                        <img src="images/services/ramadan.jpg" alt="">
-                        <p style="text-align: right;">
-                            <strong>بطولة الاستقلال الرمضانية</strong><br><br>
-                            <strong>الجمعة, أيار31, 2019</strong>
-                            <br>
-                            
-
-                            رعى وزير الثقافة ووزير الشباب الدكتور محمد ابو رمان وبحضور وزيرة الدولة لشؤون الاعلام الناطق
-                            الرسمي باسم الحكومة جمانة غنيمات، وأعضاء اللجنة المنظمة من وزارة الشباب، المباراة الختامية
-                            لبطولة الاستقلال الرمضانية " اردن النخوة ”2019 التى نظمتها وزارة الشباب طوال ايام شهر رمضان
-                            المبارك.
-                            وأقيمت المباراة الختامية بين فريقي نجوم الطفيلة من العاصمة عمان وفريق شلباية من محافظة اربد،
-                            وذلك على ملاعب نادي النصر في منطقة النصر وسط حضور جماهيري وإعلامي مميز، ونجح فريق نجوم
-                            الطفيلة من تحقيق الفوز على فريق شلباية، ليحصد النجوم لقب بطولة الاستقلال الرمضانية الاولى
-                            ويحتفظ بكأسها في العاصمة عمان بعد أداء بطولي من الفريقين .
-                            وقام أبو رمان بتوزيع الكؤوس والميداليات والجوائز المالية على الفرق الفائزة، والدروع على
-                            الجهات الراعية للبطولة والداعمة للبطولة .
-                            وأكد مدير الاعلام والاتصال الناطق الرسمي باسم وزارة الشباب عمر العزام انه وبعد النجاح الكبير
-                            الذي حققته بطولة الاستقلال الرمضانية من خلال التنظيم الدقيق وبمشاركة 1002 فريق بأكثر من عشرة
-                            الف لاعب، قررت الوزارة إعتماد إقامة البطولة سنويا، في ظل سعي الوزارة الدؤوب لتطوير برامج
-                            جديدة من شأنها أن تحاكي حاجات الشباب .
-                    </div>
+             echo "<div class='news-page article' style='margin-right:0;'>";
+                echo "<img src='$row[image_url]' alt='news photo' class='borRad15' style='box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28); margin-right:20px;'>";
+              echo "<p style='text-align: right; word-spacing: 3px;'>";
+                  echo "<strong>$row[title]</strong><br><br>";
+                     echo "<strong>$row[date]</strong>";
+                          echo" <br>";
+						echo "$row[article]";              
+                   echo" </div>";
+	    }  
+    
+    ?>
 
 
                 </div>
-                <div class="side-nav shadow-5 borRad15" id="sticky">
-                    <div class="nb-items">
 
-                        <li class="active">
-                            <a href="Services and initiatives.html">الخدمات و المبادرات</a>
-                        </li>
-
-                        <li>
-                            <a href="services - parlimentary .html">الانتخابات النيابية</a>
-                        </li>
-
-                        <li>
-                            <a href="services - talents.html">المواهب</a>
-                        </li>
-
-                    </div>
-                </div>
             </div>
         </div>
 

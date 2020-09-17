@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ministry of Youth</title>
+    <title>المدن الرياضية</title>
+    <link rel="icon" href="social media logos/star.png" type='image/x-icon' />
+
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -68,7 +70,7 @@
     <div id="container">
 
         <div class="head-txt">
-            <h1>المدن الرياضية</h1>
+            <h2>المدن الرياضية</h2>
         </div>
         <div class="container-holder">
 
@@ -76,72 +78,106 @@
                 <div class="form-row">
                     <div class="form-group col-md-8">
 
-                        <select id="gender" class="form-control col-md-5">
-                            <option selected>Choose...</option>
-                            <option>option</option>
-
-                        </select>
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color:#606C38; border:none; width:250px; direction:rtl; padding:5px">اختر
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="cool-linkN"><a href="sport cities.php?sx_id=1">مدينة الحسين للشباب</a></li>
+                            <li class="cool-linkN"><a href="sport cities.php?sx_id=2">مدينة الامير هاشم للشباب</a></li>
+                            <li class="cool-linkN"><a href="sport cities.php?sx_id=3">مدينة الحسن للشباب</a></li>
+                        </ul>
                     </div>
 
-                    <div class="form-group col-md-4 align-item-center">
-                        <h4>مدينة الحسين الرياضية</h4>
-                    </div>
+                    <?php
+   include 'includes/db.inc.php';
+
+    $entry=$_GET['sx_id'];
+    $result1=$mysqli->query("SELECT * FROM moyouth.sport_city where id = '$entry';"); 
+   // $result2=$mysqli->query("SELECT img_url FROM moyouth.sc_images where sc_id = '$entry';");   
+    $sql ="SELECT img_url FROM sc_images where sc_id = '$entry';";
+
+    $result2 = mysqli_query($mysqli,$sql);
+
+    if(!$result1 || !$result2){
+        echo "no data";
+    }
+    else{
+       
+	   $row1=$result1->fetch_assoc();
+        echo "<div class='form-group col-md-4 align-item-center'>";
+                    echo "<h4>$row1[name]</h4>";
+                   echo "</div>";
+                echo "</div>";
+            echo "</div>";
+
+           echo" <div class='ab-container'>";
+
+              echo  "<div class='sport-main shadow-5 borRad15'>";
+
+                   echo "<div class='slider'>";
+
+                      echo "<div id='carouselExampleIndicators' class='carousel slide' data-ride='carousel'>";
+                      echo "<div class='carousel-inner'>";
+                      
+                //  echo "<ol class='carousel-indicators'>" ;
+                //   echo "<li data-target='#carouselExampleIndicators' data-slide-to='0' class='active'></li>";   
+                //     echo  "<li data-target='#carouselExampleIndicators' data-slide-to='1'></li>";
+                //     echo "<li data-target='#carouselExampleIndicators' data-slide-to='2'></li>";
+                //       echo "</ol>";
+                
+
+
+               
+               $row2 = mysqli_fetch_row($result2);
+                 
+
+                           echo "<div class='carousel-item active'>";
+                                echo "<img class='d-block w-100' src='".$row2[0].".jpg"."'";
+                                     echo "  alt='First slide' height='400px'>";
+                              echo "</div>";
+
+
+                              echo "<div class='carousel-item'>";
+                              echo "<img class='d-block w-100' src='".$row2[0]."2.jpg"."'";
+                                   echo "  alt='First slide' height='400px'>";
+                            echo "</div>";
+
+
+                            echo "<div class='carousel-item'>";
+                            echo "<img class='d-block w-100' src='".$row2[0]."3.jpg"."'";
+                                 echo "  alt='First slide' height='400px'>";
+                          echo "</div>";
+                              
+                        
+                              
+                               echo "</div>";
+                           echo "<a class='carousel-control-prev' href='#carouselExampleIndicators' role='button'
+                                data-slide='prev'>";
+                              echo "<span class='carousel-control-prev-icon' aria-hidden='true'></span>";
+                               echo "<span class='sr-only'>Previous</span>";
+                            echo "</a>";
+                           echo "<a class='carousel-control-next' href='#carouselExampleIndicators' role='button'
+                                data-slide='next'>";
+                                echo "<span class='carousel-control-next-icon' aria-hidden='true'></span>";
+                              echo "<span class='sr-only'>Next</span>";
+                            echo "</a>";
+                       echo "</div>";
+                   echo "</div>";
+
+                    echo "<div class='sp-article shadow-5 borRad5'>";
+                    echo " <p>'$row1[article]'</p>";
+                   echo " </div>";
+
+           
+	    }  
+    
+    ?>
+
+
                 </div>
             </div>
 
-            <div class="ab-container">
-
-                <div class="sport-main shadow-5 borRad15">
-
-                    <div class="slider">
-
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="images/sport/athlete-1840437_1920.jpg"
-                                        alt="First slide" height="400px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="images/sport/box-1514845_1920.jpg"
-                                        alt="Second slide" height="400px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="images/sport/man-731900_1920.jpg" alt="Third slide"
-                                        height="400px">
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                                data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                                data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="sp-article shadow-5 borRad5">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolores delectus cupiditate
-                            suscipit officiis provident ipsam exercitationem. Quis nisi culpa veniam quo? Voluptatum
-                            commodi culpa voluptates aliquam, aliquid eos repudiandae!
-                        </p>
-                    </div>
-
-
-                </div>
-
-
-            </div>
         </div>
+    </div>
     </div>
 
 
@@ -185,7 +221,8 @@
             </div>
 
             <div class="col-md-4 map f-mar p-0">
-                <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=The%20Higher%20Council%20of%20Youth,%20Al%20Hidayah%20St%2064,%20Amman+(My%20Business%20Name)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=The%20Higher%20Council%20of%20Youth,%20Al%20Hidayah%20St%2064,%20Amman+(My%20Business%20Name)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                 <a href="https://www.maps.ie/route-planner.htm"></a>
             </div>
             <div class="col-md-4 info f-mar">
