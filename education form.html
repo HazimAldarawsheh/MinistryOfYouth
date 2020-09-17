@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>طلب تطوع</title>
-    <link rel="icon" href="social media logos/star.png" type='image/x-icon' />
-
+    <title>Ministry of Youth</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -77,23 +75,23 @@
             
                 <div class="cs-form shadow-5 borRad15">
 
-                    <form id="eduForm" action="edu.php" method="POST">
+                    <form>
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                 <label for="inputFname">الاسم الاول</label>
-                                <input type="text" class="form-control" id="inputFname" name="fname">
+                                <input type="text" class="form-control" id="inputFname">
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="inputMname">اسم الاب</label>
-                                <input type="text" class="form-control" id="inputMname" name="sname">
+                                <input type="text" class="form-control" id="inputMname">
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="inputLname">اسم الجد</label>
-                                <input type="text" class="form-control" id="inputGname" name="tname">
+                                <input type="text" class="form-control" id="inputGname">
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="inputLname">اسم العائلة</label>
-                                <input type="text" class="form-control" id="inputLname" name="lname">
+                                <input type="text" class="form-control" id="inputLname">
                             </div>
                         </div>
 
@@ -101,15 +99,15 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="age">العمر</label>
-                                <input type="text" class="form-control" id="Age" name="age">
+                                <input type="text" class="form-control" id="Age">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="inputState">الجنس</label>
-                                <select id="gender" class="form-control col-md-12"  name="gender">
+                                <select id="gender" class="form-control col-md-12">
                                     <option selected>Choose...</option>
-                                    <option value="male">ذكر</option>
-                                    <option value="female">انثى</option>
+                                    <option>ذكر</option>
+                                    <option>انثى</option>
                                 </select>
                             </div>
                         </div>
@@ -117,34 +115,33 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputState">التخصص الجامعي</label>
-                                <select id="gender" class="form-control col-md-12" name="major">
+                                <select id="gender" class="form-control col-md-12">
                                     <option selected>Choose...</option>
-                                <option value="medicin">الطب</option>
-                                <option value="engineering">الهندسة</option>
-                                <option value="langueges">لغات</option>
-                                <option value="business">كلية الاعمال</option>
-                                <option value="IT">تكنولوجيا المعلومات</option>
-                                <option value="special needs">تربية خاصة</option>
-                                <option value="other">ليس على مقاعد الدراسة</option>
+                                    <option>الطب</option>
+                                    <option>الهندسة</option>
+                                    <option>لغات</option>
+                                    <option>كلية الاعمال</option>
+                                    <option>تكنولوجيا المعلومات</option>
+                                    <option>تربية خاصة</option>
                                 </select>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="inputState">المحافظة</label>
-                                <select id="talent" class="form-control col-md-12" name="city">
+                                <select id="talent" class="form-control col-md-12">
                                     <option selected>Choose...</option>
-                                    <option value="irbid">اربد</option>
-                                    <option value="karak">البلقاء</option>
-                                    <option value="jarash">جرش</option>
-                                    <option value="zarqa">الزرقاء</option>
-                                    <option value="tafeleh">الطفيلة</option>
-                                    <option value="ajloon">عجلون</option>
-                                    <option value="aqaba">العقبة</option>
-                                    <option value="amman">عمان</option>
-                                    <option value="karak">الكرك</option>
-                                    <option value="madaba">مادبا</option>
-                                    <option value="ma'an">معان</option>
-                                    <option value="mafraq">المفرق</option>
+                                    <option>اربد</option>
+                                    <option>البلقاء</option>
+                                    <option>جرش</option>
+                                    <option>الزرقاء</option>
+                                    <option>الطفيلة</option>
+                                    <option>عجلون</option>
+                                    <option>العقبة</option>
+                                    <option>عمان</option>
+                                    <option>الكرك</option>
+                                    <option>مادبا</option>
+                                    <option>معان</option>
+                                    <option>المفرق</option>
                                 </select>
                             </div>
                         </div>
@@ -152,7 +149,7 @@
                         <div class="form-row">
                             <div class="form-group col-6">
                                 <label for="exampleFormControlTextarea1">العنوان بالتفصيل</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="address"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
 
                         </div>
@@ -160,10 +157,10 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputState">الفئة المستهدفة</label>
-                                <select id="education" class="form-control col-md-12" name="target">
+                                <select id="education" class="form-control col-md-12">
                                     <option selected>Choose...</option>
-                                    <option value="basic">اساسي</option>
-                                    <option value="secondry">ثانوي</option>
+                                    <option>اساسي</option>
+                                    <option>ثانوي</option>
                                     <option></option>
 
                                 </select>
@@ -171,13 +168,13 @@
 
                             <div class="form-group col-md-6">
                                 <label for="inputState">القدرة على تعليم</label>
-                                <select id="talent" class="form-control col-md-12" name="division">
+                                <select id="talent" class="form-control col-md-12">
                                     <option selected>Choose...</option>
-                                    <option value="basic courses">المواد الاساسية</option>
-                                    <option value="english">اللغة الانجليزية</option>
-                                    <option value="sports">نشاطات رياضية</option>
-                                    <option value="scintific courses">مواد تخصص الفرع العلمي</option>
-                                    <option value="literature courses">مواد تخصص الفرع الادبي</option>
+                                    <option>المواد الاساسية</option>
+                                    <option>اللغة الانجليزية</option>
+                                    <option>نشاطات رياضية</option>
+                                    <option>مواد تخصص الفرع العلمي</option>
+                                    <option>مواد تخصص الفرع الادبي</option>
 
                                 </select>
                             </div>
@@ -188,11 +185,11 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputFname">رقم الهاتف</label>
-                                <input type="tel" class="form-control" id="phoneNumber" name="phoneN">
+                                <input type="tel" class="form-control" id="phoneNumber">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputMname">البريد الالكتروني</label>
-                                <input type="email" class="form-control" id="email" name="email">
+                                <input type="email" class="form-control" id="email">
                             </div>
 
                         </div>
@@ -316,39 +313,14 @@
 
 
 </body>
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    
-    
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
     crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
-
-
-    <script>
-        $(document).ready(function () {
-            $("#eduForm").submit(function (e) {
-                e.preventDefault(); // avoid to execute the actual submit of the form.
-                var form = $(this);
-                var url = form.attr('action');
-    
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    data: form.serialize(), // serializes the form's elements.
-                    success: function (data) {
-                        alert("تم ارسال الطلب بنجاح"); // show response from the php script.
-                        window.location.href = "Services and initiatives.html";
-                    }
-                });
-    
-            });
-        });
-    </script>
 
 </html>

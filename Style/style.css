@@ -98,7 +98,6 @@ ul.topnav li.top-right a:hover {
 }
 
 #body {
-    
     flex-direction: row;
     /* background-color: #fff9f9;*/
     background: linear-gradient(to left, #F3DE8A, #fff);
@@ -178,11 +177,8 @@ ul.topnav li.top-right a:hover {
     width: 130px;
     margin-bottom: 10px;
     margin: auto;
-    border-radius: 5px;
 }
-.slider-content img{
-    border-radius: 5px;
-}
+
 .slider-box {
     width: 160px;
     height: 220px;
@@ -398,8 +394,6 @@ ul.topnav {
 .demo{
     height: auto;
 }
-
-
 
 /******* MEDIA QUERIES********/
 
